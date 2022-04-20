@@ -26,7 +26,6 @@ app.get("/is-today-holiday", (req, resp) => {
   let verif = false;
   let nomeFeriado = "";
   const hoje = new Date();
-  console.log(hoje.toLocaleDateString());
   holidays.forEach((holiday) => {
     let arrFeriado = holiday.date.split("/");
     let novaData = new Date(arrFeriado[2], arrFeriado[0] - 1, arrFeriado[1]);
